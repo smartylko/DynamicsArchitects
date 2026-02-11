@@ -6238,10 +6238,6 @@ top: -100px; */
   .transforming-sticky {
     top: calc(var(--header-height) + 30px);
   }
-  /* line 10, _responsive.less */
-  /* .team-cda {
-    width: 190px;
-  } */
 }
 @media all and (max-width: 1366px) {
   /* line 19, _responsive.less */
@@ -6306,10 +6302,7 @@ top: -100px; */
   .sec-hdn.wrap .comm-sec-hdn {
     max-width: 390px;
   }
-  /* line 81, _responsive.less */
-  /* .team-cda {
-    width: 160px;
-  } */
+
   /* line 85, _responsive.less */
   .articales-tag-wrap,
   .articales-hdn {
@@ -6567,10 +6560,6 @@ top: -100px; */
   .specialise-box .specialise-img {
     height: 360px;
   }
-  /* line 344, _responsive.less */
-  /* .team-cda {
-    display: none;
-  } */
   /* line 348, _responsive.less */
   .team-detail-wrap {
     max-width: 100%;
@@ -6761,7 +6750,44 @@ top: -100px; */
 
 
 .india-map-section{padding:28px 16px;max-width:1100px;margin:0 auto}
-.map-container{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#0d1114,#071018);box-shadow:0 14px 40px rgba(0,0,0,0.6)}
+.map-container {
+  width: 100% !important;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  display: block;
+}
+
+.location-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.location-card.active {
+  border-left: 5px solid #0d6efd;
+  background: #f0f4ff;
+}
+/* .map-container{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#0d1114,#071018);box-shadow:0 14px 40px rgba(0,0,0,0.6)} */
 .map-img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
 .map-marker{
   position:absolute;
