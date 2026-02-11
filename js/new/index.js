@@ -192,6 +192,20 @@ function updateActiveLink(activeAnchor) {
     displayText.textContent = activeAnchor.textContent; // Set the <p> tag text to the active anchor's text
 }
 
+function showCity(element, city) {
+
+  // Update Map
+  document.getElementById("mapFrame").src =
+    "https://maps.google.com/maps?q=" + city + "&output=embed";
+
+  // Remove old active card
+  document.querySelectorAll(".location-card")
+    .forEach(card => card.classList.remove("active"));
+
+  // Set active card
+  element.classList.add("active");
+}
+
 // Apply ScrollTrigger to each section
 anchors.forEach((anchor) => {
     const targetID = anchor.getAttribute("href");
