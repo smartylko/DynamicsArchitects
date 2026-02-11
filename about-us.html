@@ -233,7 +233,67 @@
 
                     <div class="presBtm">
                         <div class="presImg has-animation fade-in-up" data-delay="0.3">
-                            <img src="assets/img/locations.png" alt="image missing">
+                            <!-- <img src="assets/img/locations.png" alt="image missing"> -->
+                             <section class="container section py-5">
+
+  <div class="row g-4">
+    
+    <!-- MAP AREA -->
+    <div class="col-lg-6">
+      <div class="map-container ">
+        <iframe id="mapFrame"
+          src="https://maps.google.com/maps?q=Lucknow&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- LOCATION CARDS -->
+    <div class="col-lg-6">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <div class="location-card active" onclick="showCity(this,'Lucknow')">
+            <h6>Lucknow</h6>
+            <p>12A,282 Vrindavan Yojana, Lucknow-226029</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card " onclick="showCity(this,'New Delhi')">
+            <h6>New Delhi</h6>
+            <p>F4 Limra Complex, Kalindi Kunj Road- New Delhi -110025</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Dehradun')">
+            <h6>Dehradun</h6>
+            <p>49/3 Orchard Avenue, Balbir Road, Dalanwala, Dehradun -248001</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Meerut')">
+            <h6>Meerut</h6>
+            <p>S-35 02nd Floor Grand Square Sector 12 Hapur Road, Meerut-250002</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Aligarh')">
+            <h6>Aligarh</h6>
+            <p>Rita Palace, Dodhpur Road Opp. Green Crescent School, Aligarh-202001</p>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+  </div>
+</section>
                         </div>
                         <div class="presPara has-animation fade-in-up" data-delay="0.4">
                             <p>We pride ourselves on a highly qualified and experienced team dedicated to excellence and
@@ -243,6 +303,8 @@
                                 brings your vision to life with expertise and creativity..</p>
                         </div>
                     </div>
+
+                    
 
                 </div>
             </div>
@@ -353,6 +415,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="js/common-sub.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/new/index.js"></script>
 
 </body>
 

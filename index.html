@@ -194,10 +194,18 @@
         <div class="swiper bannerSwiper banner-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="banner-img">
-                <iframe src="https://www.youtube.com/embed/uySn1BZiWWs" allowfullscreen></iframe>
+            <div class="banner-img">
+              <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.youtube.com/embed/uySn1BZiWWs?autoplay=1&mute=1&loop=1&playlist=uySn1BZiWWs&controls=0&showinfo=0&rel=0"
+                    title="Farmhouse Walkthrough"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
               </div>
             </div>
+            </div>
+
             <div class="swiper-slide">
               <div class="banner-img">
                 <video muted playsinline autoplay loop>
@@ -303,16 +311,15 @@
     </section>
 
 
-    <section class="container section">
+    <!-- <section class="container section">
       <h2 class="section-title text-center comm-sec-hdn">Our Footprint</h2>
-      <!-- <div class="presImg has-animation fade-in-up" data-delay="0.3"> -->
-        <!-- <img src="assets/img/locations.png" alt="image missing"> -->
+
          <div class="map-container">
   <iframe id="mapFrame"
     src="https://maps.google.com/maps?q=Lucknow&output=embed">
   </iframe>
 </div>
-      <!-- </div> -->
+      
       <div class="row g-4 mt-3">
         <div class="col-md-4">
           <div class="card service-card">
@@ -356,7 +363,70 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
+
+    <section class="container section py-5">
+  <h2 class="text-center mb-4">Our Footprint</h2>
+
+  <div class="row g-4">
+    
+    <!-- MAP AREA -->
+    <div class="col-lg-6">
+      <div class="map-container ">
+        <iframe id="mapFrame"
+          src="https://maps.google.com/maps?q=Lucknow&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- LOCATION CARDS -->
+    <div class="col-lg-6">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <div class="location-card active" onclick="showCity(this,'Lucknow')">
+            <h6>Lucknow</h6>
+            <p>12A,282 Vrindavan Yojana, Lucknow-226029</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card " onclick="showCity(this,'New Delhi')">
+            <h6>New Delhi</h6>
+            <p>F4 Limra Complex, Kalindi Kunj Road- New Delhi -110025</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Dehradun')">
+            <h6>Dehradun</h6>
+            <p>49/3 Orchard Avenue, Balbir Road, Dalanwala, Dehradun -248001</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Meerut')">
+            <h6>Meerut</h6>
+            <p>S-35 02nd Floor Grand Square Sector 12 Hapur Road, Meerut-250002</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Aligarh')">
+            <h6>Aligarh</h6>
+            <p>Rita Palace, Dodhpur Road Opp. Green Crescent School, Aligarh-202001</p>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Mapping Ends -->
 
@@ -979,6 +1049,5 @@
   <script src="js/new/index.js"></script>
 
 </body>
-
 
 </html>
