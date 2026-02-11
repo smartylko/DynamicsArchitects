@@ -203,10 +203,17 @@
             <div class="swiper-slide">
               <div class="banner-img">
                 <video muted playsinline autoplay loop>
-                  <source src="assets/ploting-r-02_BZOglVqf.mp4" type="video/mp4" />
+                  <source src="assets/INFINITY - Trim_120fps.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
+            <!-- <div class="swiper-slide">
+              <div class="banner-img">
+                <video muted playsinline autoplay loop>
+                  <source src="assets/VID-20260210-WA0001.mov" type="video/mp4" />
+                </video>
+              </div>
+            </div> -->
             <div class="swiper-slide">
               <div class="banner-img">
                 <video muted playsinline autoplay loop>
@@ -293,13 +300,18 @@
 
     <section class="container section">
       <h2 class="section-title text-center comm-sec-hdn">Our Footprint</h2>
-      <div class="presImg has-animation fade-in-up" data-delay="0.3">
-        <img src="assets/img/locations.png" alt="image missing">
-      </div>
+      <!-- <div class="presImg has-animation fade-in-up" data-delay="0.3"> -->
+        <!-- <img src="assets/img/locations.png" alt="image missing"> -->
+         <div class="map-container">
+  <iframe id="mapFrame"
+    src="https://maps.google.com/maps?q=Lucknow&output=embed">
+  </iframe>
+</div>
+      <!-- </div> -->
       <div class="row g-4 mt-3">
         <div class="col-md-4">
           <div class="card service-card">
-            <div class="card-body">
+            <div class="card-body" onclick="showCity('Delhi')">
               <h5 class="card-title">New Delhi</h5>
               <p class="card-text">F4 Limra Complex, Kalindi Kunj Road- New Delhi 110025</p>
             </div>
@@ -307,7 +319,7 @@
         </div>
         <div class="col-md-4">
           <div class="card service-card">
-            <div class="card-body">
+            <div class="card-body" onclick="showCity('Dehradun')">
               <h5 class="card-title">Dehradun</h5>
               <p class="card-text">49/3 Orchard Avenue, Balbir Road, Dalanwala, Dehradun -248001</p>
             </div>
@@ -315,7 +327,7 @@
         </div>
         <div class="col-md-4">
           <div class="card service-card">
-            <div class="card-body">
+            <div class="card-body" onclick="showCity('Meerut')">
               <h5 class="card-title">Meerut</h5>
               <p class="card-text">S-35 02nd Floor Grand Square Sector 12 Hapur Road, Meerut-250002</p>
             </div>
@@ -323,7 +335,7 @@
         </div>
         <div class="col-md-4">
           <div class="card service-card">
-            <div class="card-body">
+            <div class="card-body" onclick="showCity('Aligarh')">
               <h5 class="card-title">Aligarh</h5>
               <p class="card-text">Rita Palace, Dodhpur Road Opp. Green Crescent School, Aligarh-202001</p>
             </div>
@@ -331,7 +343,7 @@
         </div>
         <div class="col-md-4">
           <div class="card service-card">
-            <div class="card-body">
+            <div class="card-body" onclick="showCity('Lucknow')">
               <h5 class="card-title">Lucknow</h5>
               <p class="card-text">12A,282 Vrindavan Yojana, Lucknow-226029</p>
             </div>
@@ -344,15 +356,18 @@
     <!-- Mapping Ends -->
 
     <!-- Transforming Starts -->
-    <div class="comm-navigation" id="endorsements"></div>
-    <section class="comm-section bg-grey transform-section">
+    
+    <section class="comm-section">
       <div class="container">
-        <div class="transforming-hdn-wrap" data-aos="fade-up">
-          <div class="transforming-hdn-left"></div>
-          <h3 class="comm-sec-hdn">
+        <div class="comm-top-elem comm-navigation" id="endorsements"></div>
+        <!-- <div class="transforming-hdn-wrap" data-aos="fade-up"> -->
+          <!-- <div class="transforming-hdn-left"></div> -->
+           <div class="sec-hdn" data-aos="fade-up">
+          <h2 class="comm-sec-hdn" style="text-align: center;">
             Our Endorsements <span></span>
-          </h3>
-          <div class="transforming-hdn-right"></div>
+          </h2>
+        </div>
+          <!-- <div class="transforming-hdn-right"></div> -->
           <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
@@ -409,7 +424,7 @@
             </div>
           </div>
 
-        </div>
+        <!-- </div> -->
       </div>
     </section>
     <!-- Transforming Ends -->

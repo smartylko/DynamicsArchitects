@@ -1,18 +1,11 @@
 
-DynamicArc – Multi-page Bootstrap Website (Premium)
+DynamicArchitects – Multi-page Bootstrap Website (Premium)
 
 Folder structure:
 - index.html
-- about.html
-- services.html
-- projects.html
-- testimonials.html
-- team.html
-- contact.html
-- css/custom.css
-- js/main.js
-- assets/img/logo.png
-- assets/images/p1.png, p2.png, p3.png
+- about-us.html
+- people-team.html
+- contact-us.html
 
 Notes:
 - Replace assets/images/* with your real portfolio photographs (optimised).
