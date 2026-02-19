@@ -86,4 +86,18 @@ $(document).on("click", ".procKsm", function () {
 $(document).on("click", ".workModal-cross", function () {
     $(".mainSubLink").removeClass("mainSubLink-in");
 });
+
+function showCity(element, city) {
+
+  // Update Map
+  document.getElementById("mapFrame").src =
+    "https://maps.google.com/maps?q=" + city + "&output=embed";
+
+  // Remove old active card
+  document.querySelectorAll(".location-card")
+    .forEach(card => card.classList.remove("active"));
+
+  // Set active card
+  element.classList.add("active");
+}
 /* work modal end */
