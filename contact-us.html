@@ -46,6 +46,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/common-css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 </head>
 
@@ -163,34 +165,63 @@
 
 
             <div class="section commSec">
-                <img src="assets/img/locations.png"
-                    style=" width: 100%; height: 100%; max-width: unset; object-fit: contain; object-position: center;"
-                    alt="contact-us page">
-                <!-- <div class="commHdnSec">
-            <div class="map-ct">
-                <div class="map"> -->
-                <!-- start -->
-                <!-- <img src="./img/new/contact-map.png" alt="Image missing" /> -->
+                <div class="row g-4">
+    
+    <!-- MAP AREA -->
+    <div class="col-lg-6">
+      <div class="map-container ">
+        <iframe id="mapFrame"
+          src="https://maps.google.com/maps?q=Lucknow&output=embed"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
 
-                <!-- <img src="assets/img/India_Map.png" alt="contact-us page"> -->
-                <!-- end -->
+    <!-- LOCATION CARDS -->
+    <div class="col-lg-6">
+      <div class="row g-3">
 
-                <!-- map marker content -->
-                <!-- <div class="map-marking-ct">
-                        <div class="map-mark delhi"> 
-                            <div class="location-details">
-                                <h2>New Delhi</h2>
-                                <p>
-                                    Unit 710-11-12, DLF Prime towers, Okhla phase-1, <span>New Delhi,</span> India.
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- map marker content end -->
-                <!-- 
-                </div>
-            </div>
-        </div> -->
+        <div class="col-md-6">
+          <div class="location-card active" onclick="showCity(this,'Lucknow')">
+            <h6>Lucknow</h6>
+            <p>12A,282 Vrindavan Yojana, Lucknow-226029</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card " onclick="showCity(this,'New Delhi')">
+            <h6>New Delhi</h6>
+            <p>F4 Limra Complex, Kalindi Kunj Road- New Delhi -110025</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Dehradun')">
+            <h6>Dehradun</h6>
+            <p>49/3 Orchard Avenue, Balbir Road, Dalanwala, Dehradun -248001</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Meerut')">
+            <h6>Meerut</h6>
+            <p>S-35 02nd Floor Grand Square Sector 12 Hapur Road, Meerut-250002</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="location-card" onclick="showCity(this,'Aligarh')">
+            <h6>Aligarh</h6>
+            <p>Rita Palace, Dodhpur Road Opp. Green Crescent School, Aligarh-202001</p>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+  </div>
             </div>
 
             <div class="section commSec">
@@ -222,7 +253,7 @@
                                 Write to us.
                             </p>
                             <form id="contactVaildate" method="POST"
-                                action="https://www.cdaarchitects.in/contact-submit">
+                                action="contact-us.html">
                                 <input type="hidden" name="_token" value="vRe1GR4whVkBKypkWXM1DGYFJpEOz4odpwgqghOD">
                                 <div class="row contactRow has-animation fade-in-up" data-delay="0.2">
                                     <div class="w33 w-990-50 w-480-100">
@@ -377,131 +408,6 @@
             },
         });
 
-        // var markerLeft = $(".mapMarker").offset().left;
-        // var markerTop = $(".mapMarker").offset().top;
-
-        // // console.log(markerLeft, markerTop);
-
-        // setTimeout(() => {
-        //     $(".map-marking-ct").addClass('active');
-        // }, 500);
-
-        // 
-    </script>
-    //
-    <script>
-        /* market Slider */
-        var marketSlide = new Swiper('.marketSlide', {
-            // centeredSlides: true,
-            spaceBetween: 16,
-            slidesPerView: 1.1,
-            speed: 1500,
-            grabCursor: true,
-            // loop: true,h
-            navigation: {
-                nextEl: '.marketNext',
-                prevEl: '.marketPrev',
-            },
-        });
-        /* market Slider end */
-
-        /* featSlide Slider */
-        // var featSlide = new Swiper('.featSlide', {
-        //     slidesPerView: 1,
-        //     spaceBetween: 15,
-        //     speed: 1500,
-        //     // loop: true,
-        //     grabCursor: true,
-        //     navigation: {
-        //         nextEl: '.featNext',
-        //         prevEl: '.featPrev',
-        //     },
-        //     breakpoints: {
-        //         800: {
-        //             slidesPerView: 1.2,
-        //             spaceBetween: 50,
-        //         },
-        //         991: {
-        //             slidesPerView: 1.5,
-        //             spaceBetween: 100,
-        //         },
-        //     }
-        // });
-        /* featSlide Slider end */
-
-        // var menuHeight;
-
-        // $(document).on('click', '.headMenu', function () {
-        //     setTimeout(() => {
-        //         menuHeight = $('.menuBox').height();
-        //         console.log(menuHeight);
-        //     }, 500);
-        // });
-
-
-        // let menuTimeline = new TimelineMax({
-        //     paused: true,
-        //     onComplete: function () {
-        //         // console.log("animation complete");
-        //     }
-        //     // repeat: -1,
-        //     // repeatDelay: 5
-        // });
-        // // menuTimeline.timeScale(5);
-        // menuTimeline
-        //     .to(".menuBox", 0.2, {
-        //         // autoAlpha: 1,
-        //         css: {
-        //             // "height": "100vh",
-        //             "height": "100%",
-        //             "opacity": "1",
-        //             "visibility": "visible"
-        //         },
-        //     }, 0)
-        //     .staggerTo(".menuLine", 0.2, {
-        //         // autoAlpha: 1,
-        //         css: {
-        //             "height": "100%",
-        //         },
-        //     }, 0.1)
-        //     // .staggerTo(".menuHid", 0.5, {
-        //     //     autoAlpha: 1,
-        //     //     css: {
-        //     //         "transform": "translateX(0)"
-        //     //     },
-        //     // }, "<1");
-        //     .to(".menuLef .menuHid", {
-        //         duration: 0.5,
-        //         css: {
-        //             "transform": "translateX(0)"
-        //         },
-        //     }, "<0.6")
-        //     .to(".menuMed .menuHid", {
-        //         duration: 0.5,
-        //         css: {
-        //             "transform": "translateX(0)"
-        //         },
-        //     }, "<0.2")
-        //     .to(".menuRig .menuHid", {
-        //         duration: 0.5,
-        //         css: {
-        //             "transform": "translateX(0)"
-        //         },
-        //     }, "<0.2")
-        //     .to(".menuLogo", {
-        //         duration: 0.5,
-        //         css: {
-        //             "opacity": "1",
-        //             "transform": "translateX(0)"
-        //         },
-        //     }, "<0.2")
-        //     .to(".menuCross", {
-        //         duration: 0.5,
-        //         css: {
-        //             "opacity": "1",
-        //             "transform": "translateX(0) rotate(0deg)"
-        //         },
-        //     }, "<0.2")
     </script>
 
 </body>
